@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Покупайте авиабилеты онлайн. Ищите выгодные авиарейсы и планируйте путешествия.">
+    <title>AirFly — авиабилеты онлайн</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">✈ Air<span>Fly</span></a>
+
+            <nav class="nav-links">
+                <a href="#search">Авиабилеты</a>
+                <a href="#destinations">Направления</a>
+                <a href="#advantages">О нас</a>
+            </nav>
+
+            <a href="#search" class="header-button">Найти билет</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="search">
+            <div class="container hero-content">
+                <span class="eyebrow">✦ Путешествуй с удовольствием</span>
+                <h1>Мир ближе,<br>чем ты думаешь</h1>
+                <p>Находи выгодные авиабилеты и открывай новые места вместе с AirFly.</p>
+
+                <div class="search-card">
+                    <h2>Куда отправимся?</h2>
+
+                    <form id="flightForm">
+                        <div class="trip-options">
+                            <label>
+                                <input type="radio" name="trip" value="round" checked>
+                                Туда и обратно
+                            </label>
+                            <label>
+                                <input type="radio" name="trip" value="oneway">
+                                В одну сторону
+                            </label>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="from">Откуда</label>
+                                <select id="from" required>
+                                    <option value="Бишкек">Бишкек (BSZ)</option>
+                                    <option value="Ош">Ош (OSS)</option>
+                                    <option value="Алматы">Алматы (ALA)</option>
+                                    <option value="Стамбул">Стамбул (IST)</option>
+                                    <option value="Дубай">Дубай (DXB)</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="to">Куда</label>
+                                <select id="to" required>
+                                    <option value="Стамбул">Стамбул (IST)</option>
+                                    <option value="Дубай">Дубай (DXB)</option>
+                                    <option value="Бишкек">Бишкек (BSZ)</option>
+                                    <option value="Алматы">Алматы (ALA)</option>
+                                    <option value="Ош">Ош (OSS)</option>
+                                    <option value="Лондон">Лондон (LHR)</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="departure">Дата вылета</label>
+                                <input type="date" id="departure" required>
+                            </div>
+
+                            <div class="field" id="returnField">
+                                <label for="returnDate">Обратно</label>
+                                <input type="date" id="returnDate">
+                            </div>
+
+                            <div class="field">
+                                <label for="passengers">Пассажиры</label>
+                                <select id="passengers">
+                                    <option value="1">1 пассажир</option>
+                                    <option value="2">2 пассажира</option>
+                                    <option value="3">3 пассажира</option>
+                                    <option value="4">4 пассажира</option>
+                                    <option value="5">5 пассажиров</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="classType">Класс</label>
+                                <select id="classType">
+                                    <option>Эконом</option>
+                                    <option>Бизнес</option>
+                                    <option>Первый класс</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="search-button">
+                            🔍 Найти авиабилеты
+                        </button>
+                    </form>
+
+                    <p id="message" class="message" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations section" id="destinations">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">Вдохновение для поездки</span>
+                        <h2>Популярные направления</h2>
+                    </div>
+                    <p>Выбирай следующее приключение</p>
+                </div>
+
+                <div class="destination-grid">
+                    <article class="destination-card istanbul">
+                        <div class="destination-info">
+                            <span>Турция</span>
+                            <h3>Стамбул</h3>
+                            <p>От 12 500 сом</p>
+                            <button class="destination-button" data-city="Стамбул">
+                                Найти билет →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="destination-card dubai">
+                        <div class="destination-info">
+                            <span>ОАЭ</span>
+                            <h3>Дубай</h3>
+                            <p>От 18 900 сом</p>
+                            <button class="destination-button" data-city="Дубай">
+                                Найти билет →
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="destination-card london">
+                        <div class="destination-info">
+                            <span>Великобритания</span>
+                            <h3>Лондон</h3>
+                            <p>От 25 000 сом</p>
+                            <button class="destination-button" data-city="Лондон">
+                                Найти билет →
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages section" id="advantages">
+            <div class="container">
+                <div class="section-heading centered">
+                    <span class="eyebrow">Почему AirFly?</span>
+                    <h2>Путешествовать стало проще</h2>
+                </div>
+
+                <div class="advantages-grid">
+                    <article class="advantage">
+                        <div class="advantage-icon">💰</div>
+                        <h3>Выгодные цены</h3>
+                        <p>Помогаем находить билеты под твой бюджет.</p>
+                    </article>
+
+                    <article class="advantage">
+                        <div class="advantage-icon">⚡</div>
+                        <h3>Быстрый поиск</h3>
+                        <p>Удобная форма поиска без лишних действий.</p>
+                    </article>
+
+                    <article class="advantage">
+                        <div class="advantage-icon">🌍</div>
+                        <h3>Весь мир</h3>
+                        <p>Открывай новые страны и города.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container cta-content">
+                <div>
+                    <span class="eyebrow">Твоё путешествие начинается здесь</span>
+                    <h2>Готов к новым открытиям?</h2>
+                    <p>Выбери направление и начни планировать поездку.</p>
+                </div>
+                <a href="#search" class="cta-button">Найти билет ✈</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="logo">✈ Air<span>Fly</span></a>
+            <p>© 2026 AirFly. Учебный демонстрационный проект.</p>
+            <a href="#search">Наверх ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
